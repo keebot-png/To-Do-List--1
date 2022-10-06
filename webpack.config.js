@@ -9,11 +9,11 @@ module.exports = {
       template: './src/index.html',
     }),
   ],
-    output: {
-      filename: '[main].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
-      clean: true,
-    },
+  output: {
+    filename: '[main].bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+    clean: true,
+  },
   module: {
     rules: [
       {
