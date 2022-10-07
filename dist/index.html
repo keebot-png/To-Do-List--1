@@ -1,1 +1,36 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>To-do list app</title><script defer="defer" src="runtime.js"></script><script defer="defer" src="main.js"></script></head><body><div class="container"><div class="header"><h2>To do list</h2></div><div id="newtask"><input placeholder="Add to your list..."></div><ul id="tasks"></ul><input type="button" value="Clear all completed" onclick="addItem();"/></div></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do list app</title>
+    <script src="https://kit.fontawesome.com/d06df44343.js" crossorigin="anonymous"></script>
+<script defer src="runtime.js"></script><script defer src="main.js"></script></head>
+<body>
+
+    <div class="container">
+
+        <div class="header">
+            <h2>To do list</h2>
+        </div>
+
+        <div class="newtask">
+            <input type="text" placeholder="Add to your list...">
+        </div>
+
+        <ul id="tasks">
+        
+        <!-- Array objects get added here -->
+
+        </ul>
+
+        <div class="clear-btn">
+            <input type="button" value="Clear all completed" onclick="addItem();"/>
+        </div>
+            
+    
+    </div>
+
+    
+</body>
+</html>

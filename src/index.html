@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-do list app</title>
-
+    <script src="https://kit.fontawesome.com/d06df44343.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -14,7 +14,7 @@
             <h2>To do list</h2>
         </div>
 
-        <div id="newtask">
+        <div class="newtask">
             <input type="text" placeholder="Add to your list...">
         </div>
 
@@ -24,7 +24,10 @@
 
         </ul>
 
-        <input type="button" value="Clear all completed" onclick="addItem();"/>
+        <div class="clear-btn">
+            <input type="button" value="Clear all completed" onclick="addItem();"/>
+        </div>
+            
     
     </div>
 
