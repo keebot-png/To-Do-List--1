@@ -1,6 +1,6 @@
 import { addLocal } from './store.js';
 
-const toDoLi = document.querySelector('.list');
+const toDoAppend = document.querySelector('.list');
 const parser = new DOMParser();
 
 const addToDo = (todo, todoList) => {
@@ -103,7 +103,7 @@ const addToDo = (todo, todoList) => {
 
     addLocal(todoList.list);
   });
-  toDoLi.append(todoElement);
+  toDoAppend.append(todoElement);
 };
 
-export default addToDo;
+export { addToDo, toDoAppend };
