@@ -2,7 +2,113 @@
 
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: rgb(128, 22, 228);
+}
+
+.lineBorder {
+  border-bottom: 1px solid rgba(90, 84, 84, 0.08);
+}
+
+.container {
+  background-color: white;
+  box-shadow: 0 1px 6px lightslategrey;
+  width: 40%;
+  border-radius: 8px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+i {
+  font-size: 0.9em;
+  color: #545862a3;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+button,
+input {
+  background-color: transparent;
+  border: none;
+}
+
+input {
+  font-size: 1em;
+}
+
+input::placeholder {
+  font-style: italic;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  padding: 1em;
+  gap: 0.5em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.clear-btn {
+  padding: 1em;
+  width: 100%;
+  background-color: #eee;
+  font-size: 1em;
+  color: #545862a3;
+  border-radius: 8px;
+}
+
+.list-item {
+  display: flex;
+  gap: 1em;
+}
+
+.task-menu {
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.8rem;
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 5px;
+  right: 32%;
+  background-color: #fff;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+  padding: 0.2em 1.5em;
+  margin-top: 3em;
+  position: absolute;
+}
+
+.task-menu li {
+  padding: 1em;
+  position: relative;
+}
+
+.hidden {
+  display: none;
 }

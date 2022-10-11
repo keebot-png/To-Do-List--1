@@ -1,38 +1,28 @@
 /* eslint-disable */
 import _ from 'lodash';
 import './style.css';
+import ToDoList from './modules/todo.js';
+import addToDo from './modules/userInter.js';
+import { addLocal, loadLocal } from './modules/store.js';
 
-//  Array to place the to-do list items
-const itemArray = [
-  {
-    index: 0,
-    description: 'Tempor consequat ut et consectetur irure aute fugiat qui velit.',
-    completed: false,
-  },
-  {
-    index: 1,
-    description: 'Reprehenderit eu eu veniam ullamco incididunt aliqua velit non consequat excepteur excepteur qui.',
-    completed: false,
-  },
-  {
-    index: 2,
-    description: 'Sint nisi mollit sunt non fugiat.',
-    completed: false,
-  },
-  {
-    index: 3,
-    description: 'Amet laborum aute aliqua Lorem reprehenderit.',
-    completed: false,
-  },
-];
+const submitBtn = document.querySelector('.submit-btn');
+const addingInput = document.querySelector('.add-todo');
 
-itemArray.forEach((item) => {
-  document.getElementById('tasks').innerHTML
+const toDoList = new ToDoList();
+const dataFromLocalStorage = loadLocal();
 
-  += `<li class="task-1 ${item.index}">
-    <label for="1">
-      <input type="checkbox">
-      <p>${item.description}</p>
-    </label>
-  </li>`;
+dataFromLocalStorage.forEach((toDoObject) => {
+  const pushedLocalTask = toDoList.addNewTask(
+    toDoObject.index, toDoObject.description, toDoObject.isCompleted,
+  );
+  addToDo(pushedLocalTask, toDoList);
+});
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  const inputValue = addingInput.value;
+  const pushedTask = toDoList.addNewTask(null, inputValue, false);
+  addingInput.value = '';
+  addToDo(pushedTask, toDoList);
+  addLocal(toDoList.list);
 });
