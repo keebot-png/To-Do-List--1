@@ -30,11 +30,11 @@ export default class ToDoList {
         task.index = indexOfTask + 1;
       });
     }
-    
+
     deleteCompleteItems = () => {
       this.list = this.list.filter((item) => item.isCompleted !== true);
       this.list.forEach((task, indexOfTask) => {
         task.index = indexOfTask + 1;
       });
-  }
+    }
 }
