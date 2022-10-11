@@ -1,4 +1,4 @@
-// /* eslint-disable */
+/* eslint-disable */
 import _ from 'lodash';
 import './style.css';
 import ToDoList from './modules/todo.js';
