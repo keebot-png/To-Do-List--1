@@ -1,13 +1,13 @@
 import { addLocal } from './store.js';
 
-const toDoLi = document.querySelector('.list');
+const toDoAppend = document.querySelector('.list');
 const parser = new DOMParser();
 
 const addToDo = (todo, todoList) => {
   const string = `
     <li class="border-bottom">
       <div class="list-item">
-        <input type="checkbox" ${todo.isCompleted ? 'checked' : ''} id=${todo.index}>
+        <input type="checkbox" ${todo.completed ? 'checked' : ''} id=${todo.index}>
         <div class="todo-li">
           ${todo.description}
         </div>
@@ -82,7 +82,7 @@ const addToDo = (todo, todoList) => {
   });
 
   const todoCompleted = todoElement.querySelector('input[type="checkbox"]');
-  if (todo.isCompleted) {
+  if (todo.completed) {
     todoElement.style.textDecoration = 'line-through';
     todoElement.style.color = '#545862a3';
   } else {
@@ -103,7 +103,7 @@ const addToDo = (todo, todoList) => {
 
     addLocal(todoList.list);
   });
-  toDoLi.append(todoElement);
+  toDoAppend.append(todoElement);
 };
 
-export default addToDo;
+export { addToDo, toDoAppend };

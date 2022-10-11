@@ -83,6 +83,7 @@ li {
   font-size: 1em;
   color: #545862a3;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .list-item {
